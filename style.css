@@ -1,14 +1,28 @@
+html,
 body {
-  background-color: #d9afd9;
-  background-image: -webkit-linear-gradient(135deg, #d9afd9 0%, #97d9e1 62%);
-  background-image: -moz-linear-gradient(135deg, #d9afd9 0%, #97d9e1 62%);
-  background-image: -o-linear-gradient(135deg, #d9afd9 0%, #97d9e1 62%);
-  background-image: linear-gradient(135deg, #d9afd9 0%, #97d9e1 62%);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  margin: 0 0;
 }
+
 h1 {
-  margin: 10vh;
+  margin: 100px auto;
+  width: 70vw;
   text-align: center;
 }
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
 .btn-container {
   margin: 20vh;
   position: relative;
@@ -28,10 +42,6 @@ button.btn {
   border: 0px solid transparent;
 }
 
-span {
-  color: white;
-}
-
 #confirm {
   z-index: -1;
   position: absolute;
@@ -39,15 +49,79 @@ span {
   height: 20px;
   font-size: 1.5em;
 }
+span {
+  font-family: 'Mansalva', cursive;
+}
 
-section.about {
+section.section {
+  padding: 100px 40px;
+  margin: 1000px 0px;
+}
+
+section.section,
+.firstHidden {
   display: none;
   justify-content: space-around;
   flex-basis: 400px;
 }
 
-section p {
-  width: 50%;
+section.contact {
+  height: 90vh;
+}
+
+section p,
+section h3 {
+  width: 90%;
+  margin: 0 20px;
+}
+
+section:nth-child(even) {
+  color: #535353;
+  background-color: #00000011;
+}
+
+div form.section {
+  display: flex;
+  flex-direction: column;
+}
+
+form.section {
+  margin: 90px 0;
+}
+
+input,
+textarea {
+  background: rgba(206, 206, 206, 0.3);
+  border: none;
+  font-size: 1.5em;
+}
+
+form.section input,
+form.section textarea {
+  flex-basis: 30px;
+  width: 310px;
+}
+
+form.section textarea {
+  flex-basis: 100px;
+}
+
+form button {
+  margin-top: 10px;
+  background-color: rgba(100, 200, 100, 0.5);
+  height: 60px;
+  font-family: 'Mansalva', cursive;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.footer {
+  color: rgba(0, 0, 0, 0.2);
+  position: sticky;
+  bottom: 20px;
+  text-align: center;
+  margin: 0 40px;
+  width: 400px;
 }
 
 @keyframes successFade {
@@ -78,17 +152,32 @@ section p {
 }
 
 @media (max-width: 900px) {
-  section.about {
+  section.section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 400px;
     text-align: center;
   }
+  section {
+    margin: 1000px 0;
+  }
+  .footer {
+    color: rgba(0, 0, 0, 0.9);
+    position: static;
+    text-align: center;
+  }
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    margin: 150px auto;
+    width: 70vw;
+    text-align: center;
+  }
+  #contact {
+    /* width: 100%; */
+    padding: 60px 0px;
+  }
 }
-<<<<<<< Updated upstream
-=======
-
-@media (max-width: 280) {
-}
->>>>>>> Stashed changes
