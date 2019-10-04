@@ -3,7 +3,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   width: 100%;
-  margin: 0 0;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -16,15 +18,16 @@ nav {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  top: 10px;
+  top: 30px;
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 5px 10px;
+  font-size: 50px;
 }
 
 .btn-container {
-  margin: 20vh;
+  /* margin: 50vh; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -52,10 +55,15 @@ button.btn {
 span {
   font-family: 'Mansalva', cursive;
 }
-
+section {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 40px;
+}
 section.section {
-  padding: 100px 40px;
-  margin: 1000px 0px;
+  padding: 250px 10px;
+  margin: 0 0px;
+  margin-top: 400px;
 }
 
 section.section,
@@ -66,7 +74,8 @@ section.section,
 }
 
 section.contact {
-  height: 90vh;
+  height: 100vh;
+  margin-bottom: 400px;
 }
 
 section p,
@@ -79,14 +88,13 @@ section:nth-child(even) {
   color: #535353;
   background-color: #00000011;
 }
+form.section {
+  margin: 100px 0;
+}
 
 div form.section {
   display: flex;
   flex-direction: column;
-}
-
-form.section {
-  margin: 90px 0;
 }
 
 input,
@@ -117,7 +125,7 @@ form button {
 
 .footer {
   color: rgba(0, 0, 0, 0.2);
-  position: sticky;
+  position: fixed;
   bottom: 20px;
   text-align: center;
   margin: 0 40px;
@@ -158,10 +166,14 @@ form button {
     align-items: center;
     flex-basis: 400px;
     text-align: center;
+    padding-top: 300px;
   }
-  section {
-    margin: 1000px 0;
+  h1 {
+    margin: 170px auto;
+    width: 100%;
+    text-align: center;
   }
+
   .footer {
     color: rgba(0, 0, 0, 0.9);
     position: static;
@@ -170,11 +182,6 @@ form button {
   nav {
     flex-direction: column;
     justify-content: center;
-  }
-  h1 {
-    margin: 150px auto;
-    width: 70vw;
-    text-align: center;
   }
   #contact {
     /* width: 100%; */

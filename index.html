@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ZachDrogePortfolio</title>
@@ -13,7 +13,7 @@
     <script defer src="./script.js"></script>
   </head>
   <body>
-    <h1>Zach Droge's Portfolio</h1>
+    <h1 id="home">Zach Droge's Portfolio</h1>
 
     <div class="btn-container">
       <button class="btn" id="btn" type="button">Enter</button>
@@ -169,32 +169,70 @@
     <section id="portfolio" class="section portfolio">
       <h2>Portfolio</h2>
       <p>
-        Due to my work with private companies, my own included, please contact me for links. Additionally to this most of my current github repos are private. All links and code will be shared with proper company contacts. I am supplied a list of project names and descriptions.
-        <ul>
-          <li><a href="http://www.bit.ly/2JFHMnI">musicVote</a></li>
-          <li><em><ul>
-            <li>Democratized playlist app to give the ability to sync desired music through Spotify.</li>
-            <li>The app is a web app to give the widest reach and ease for our users.</li>
-            <li>Guests can join and add songs, casting votes for songs they want to hear next.</li>
-          </ul></em></li>
-          <li><a href="http://www.bit.ly/2TY5rEF">Puzzle-Bot</a></li>
-          <li><em><ul>
-              <li>Web app that allowing users to generate word puzzles to be broadcast via twitter.</li>
-              <li>Crowd sources puzzle api.</li>
-              <li>Submitted puzzles tweeted to @puzzlebot2, w/ a unique hash, @ parsed to remove curse words. </li>
-              <li>Website allows for puzzle to be answered w/ score keeping.</li>
-            </ul></em></li>
-          <li><a href="http://www.bit.ly/2uBmttb">Emotions-R-Us</a></li>
-          <li><em><ul>
-              <li>Make 'meta' purchases of emotions to show principles of e-commerce website development.</li>
-              <li>E-commerce platform was a creative way to implement a retail oriented user experience and work within an agile team.</li>
-            </ul></em></li>
-        </ul>
+        Due to my work with private companies, my own included, please contact
+        me for links. Additionally to this most of my current github repos are
+        private. All links and code will be shared with proper company contacts.
+        I am supplied a list of project names and descriptions.
       </p>
+      <ul>
+        <li><a href="http://www.bit.ly/2JFHMnI">musicVote</a></li>
+        <li>
+          <em
+            ><ul>
+              <li>
+                Democratized playlist app to give the ability to sync desired
+                music through Spotify.
+              </li>
+              <li>
+                The app is a web app to give the widest reach and ease for our
+                users.
+              </li>
+              <li>
+                Guests can join and add songs, casting votes for songs they want
+                to hear next.
+              </li>
+            </ul></em
+          >
+        </li>
+        <li><a href="http://www.bit.ly/2TY5rEF">Puzzle-Bot</a></li>
+        <li>
+          <em
+            ><ul>
+              <li>
+                Web app that allowing users to generate word puzzles to be
+                broadcast via twitter.
+              </li>
+              <li>Crowd sources puzzle api.</li>
+              <li>
+                Submitted puzzles tweeted to @puzzlebot2, w/ a unique hash, @
+                parsed to remove curse words.
+              </li>
+              <li>
+                Website allows for puzzle to be answered w/ score keeping.
+              </li>
+            </ul></em
+          >
+        </li>
+        <li><a href="http://www.bit.ly/2uBmttb">Emotions-R-Us</a></li>
+        <li>
+          <em
+            ><ul>
+              <li>
+                Make 'meta' purchases of emotions to show principles of
+                e-commerce website development.
+              </li>
+              <li>
+                E-commerce platform was a creative way to implement a retail
+                oriented user experience and work within an agile team.
+              </li>
+            </ul></em
+          >
+        </li>
+      </ul>
     </section>
 
     <div id="contact" class="section firstHidden">
-      <form method="post" class="section">
+      <form #="form" method="post" class="section">
         <label for="fName">First Name</label>
         <input id="nameInput" name="fName" type="text" />
         <label for="lName">Last Name</label>

@@ -4,14 +4,9 @@
   let confirmMsg = document.querySelector('#confirm');
   let welcomeHeader = document.querySelector('h1');
   let allSections = document.querySelectorAll('.section');
-  let aboutSection = document.querySelector('.about');
-  let resumeSection = document.querySelector('.resume');
-  let portfolioSection = document.querySelector('.portfolio');
-  let form = document.querySelector('#contact');
   let footer = document.querySelector('footer');
   let doubleCheck = true;
   let contactVerb = false;
-  let isFormSubmit = false;
   let contactVerbList = [
     'a collaboration.',
     'a conversation about the weather.',
@@ -59,6 +54,12 @@
 
     valObj.message = valuesTa;
 
+    window.open(
+      `mailto:zacharyadcoding@gmail.com?subject=Hey&body=${valObj.message
+        .split(' ')
+        .join('%')}`
+    );
+
     console.log(valObj);
 
     window.location.replace('#');
@@ -82,8 +83,7 @@
 
     args.forEach(elem => {
       returnHTMLString += `<div class="${elem}">
-    <a href=\'#${elem === 'home' ? '' : elem}\'> ${elem[0].toUpperCase() +
-        elem.slice(1)}
+    <a href=\'#${elem}\'> ${elem[0].toUpperCase() + elem.slice(1)}
     </a>
      </div>`;
     });
