@@ -14,28 +14,82 @@
     'to talk video games and movies.',
     'an interview.',
   ];
+  // // Hamburger logic
+  let hamburger = document.querySelector('#hamContainer');
+  let exitHamburgerArea = document.querySelector('#exitHamburgerArea');
 
-  window.addEventListener('scroll', e => {
-    console.log('scrolling', e);
+  let isHamburgerMenuOpen = false;
+  let nav = document.querySelector('#nav');
+  let body = document.querySelector('body');
+  let h1 = document.querySelector('h1');
+  let hamLines = hamburger.childNodes;
+  let navMenuItems = nav.childNodes;
+
+  hamburger.addEventListener('click', () => {
+    if (!isHamburgerMenuOpen) {
+      hamburger.style.animation = 'hamburgerClick 300ms linear forwards';
+
+      for (let node in hamLines) {
+        if (hamLines[node].id) {
+          hamLines[node].style.margin = '0px 0px';
+        }
+      }
+      nav.style.display = 'flex';
+
+      isHamburgerMenuOpen = true;
+      exitHamburgerArea.style.backgroundColor = 'rgb(250,250, 255)';
+      exitHamburgerArea.style.filter = 'blur(40px)';
+      exitHamburgerArea.style.zIndex = '5';
+    } else {
+      hamburger.style.animation = 'hamburgerClick 300ms linear reverse';
+      nav.style.display = 'none';
+      for (let node in hamLines) {
+        if (hamLines[node].id) {
+          hamLines[node].style.margin = '5px 0px';
+        }
+      }
+      exitHamburgerArea.style.backgroundColor = '';
+      exitHamburgerArea.style.filter = '';
+      exitHamburgerArea.style.zIndex = '-1';
+      isHamburgerMenuOpen = false;
+    }
   });
+
+  exitHamburgerArea.addEventListener('click', () => {
+    if (isHamburgerMenuOpen) {
+      hamburger.style.animation = 'hamburgerClick 300ms linear reverse';
+      nav.style.display = 'none';
+      for (let node in hamLines) {
+        if (hamLines[node].id) {
+          hamLines[node].style.margin = '5px 0px';
+        }
+      }
+    }
+    exitHamburgerArea.style.backgroundColor = '';
+    exitHamburgerArea.style.zIndex = '-1';
+    isHamburgerMenuOpen = false;
+  });
+
+  // //
 
   btn.addEventListener('click', () => {
     if (!doubleCheck) {
       window.setInterval(cycleContactVerbs(), 3000);
       btnToSuccessAfterUserConfirms();
+      hamburger.style.display = '';
       contactVerb = document.querySelector('#contactSpan');
       welcomeHeader.style.animation = 'successFade 1.5s linear 0ms reverse';
       welcomeHeader.style.height = '100vh';
-      welcomeHeader.style.margin = '370px auto';
-      let nav = document.createElement('NAV');
-      nav.innerHTML = navBarHtmlCreation(
-        'home',
-        'about',
-        'resume',
-        'portfolio',
-        'contact'
-      );
-      document.body.insertBefore(nav, welcomeHeader);
+      welcomeHeader.style.margin = '200px auto';
+      // let nav = document.createElement('NAV');
+      // nav.innerHTML = navBarHtmlCreation(
+      //   'home',
+      //   'about',
+      //   'resume',
+      //   'portfolio',
+      //   'contact'
+      // );
+      // document.body.insertBefore(nav, welcomeHeader);
       allSections.forEach(elem => (elem.style.display = 'flex'));
       footer.classList.remove('firstHidden');
     } else {
@@ -92,7 +146,6 @@
     </a>
      </div>`;
     });
-
     return returnHTMLString;
   }
 
