@@ -67,7 +67,7 @@
 
     console.log(valObj);
 
-    window.location.replace('#');
+    window.location.replace('#home');
     welcomeHeader.innerHTML = `Thank you for contacting me (Zachary Droge). <br/> Please, continue to look around and <a href=\"#contact\"></a>contact me again if you want. Thank you!`;
   });
 
