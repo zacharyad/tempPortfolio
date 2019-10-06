@@ -17,13 +17,27 @@ h1 {
 nav {
   position: fixed;
   display: flex;
+  flex-direction: column;
+  opacity: 0.3;
   justify-content: space-between;
-  top: 30px;
+  font-weight: 800;
+}
+
+nav:hover {
+  opacity: 0.8;
 }
 
 nav a {
   margin: 5px 10px;
   font-size: 50px;
+}
+
+nav a:hover {
+  color: grey;
+}
+a:link,
+a:visited {
+  color: #232323;
 }
 
 .btn-container {
@@ -61,9 +75,17 @@ section {
   padding: 0 40px;
 }
 section.section {
-  padding: 250px 10px;
-  margin: 0 0px;
-  margin-top: 400px;
+  padding: 300px 50px;
+  margin: 100px 0px;
+  padding-top: 350px;
+}
+
+section > div {
+  padding: 10px 100px;
+}
+
+section.section:first-child {
+  color: pink;
 }
 
 section.section,
@@ -128,7 +150,7 @@ form button {
   position: fixed;
   bottom: 20px;
   text-align: center;
-  margin: 0 40px;
+  margin: 10px 40px;
   width: 400px;
 }
 
@@ -160,13 +182,16 @@ form button {
 }
 
 @media (max-width: 900px) {
+  body {
+    text-align: justify;
+  }
   section.section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 400px;
     text-align: center;
-    padding-top: 300px;
+    padding-top: 350px;
   }
   h1 {
     margin: 170px auto;
@@ -182,6 +207,12 @@ form button {
   nav {
     flex-direction: column;
     justify-content: center;
+    opacity: 0.1;
+    font-weight: 800;
+  }
+
+  nav:hover {
+    opacity: 0.4;
   }
   #contact {
     /* width: 100%; */

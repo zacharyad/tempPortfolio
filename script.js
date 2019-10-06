@@ -15,6 +15,10 @@
     'an interview.',
   ];
 
+  window.addEventListener('scroll', e => {
+    console.log('scrolling', e);
+  });
+
   btn.addEventListener('click', () => {
     if (!doubleCheck) {
       window.setInterval(cycleContactVerbs(), 3000);
@@ -22,6 +26,7 @@
       contactVerb = document.querySelector('#contactSpan');
       welcomeHeader.style.animation = 'successFade 1.5s linear 0ms reverse';
       welcomeHeader.style.height = '100vh';
+      welcomeHeader.style.margin = '370px auto';
       let nav = document.createElement('NAV');
       nav.innerHTML = navBarHtmlCreation(
         'home',
