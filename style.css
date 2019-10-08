@@ -211,7 +211,7 @@ div#nav {
 
 @keyframes hamburgerClick {
   0% {
-    transform: translateX(0px) rotate(30deg);
+    transform: translateX(0px) rotate(0deg);
   }
   50% {
     transform: rotate(50deg) scale(1.2);
